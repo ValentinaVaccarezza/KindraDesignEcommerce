@@ -1,0 +1,32 @@
+.botonResta, .botonSuma {
+    width: 4%;
+    padding: 8px;
+    margin: 10px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: #F2E2DC;
+    font-size: 1em
+}
+.botonAgregar {
+    width: 12%;
+    padding: 8px;
+    border-style: none;
+    border-radius: 14px;
+    background-color: #3a7251;
+    color: whitesmoke
+}
+.botonAgregar:hover {
+    transform: scale(1, 1.2);
+}
+@media screen and (min-width: 360px) and (max-width:875px) {
+    .botonResta, .botonSuma {
+        padding:4px;
+        border-radius: 4px;
+        width: 8%;
+        font-size:1.2em;
+    }
+    .botonAgregar {
+        font-size: 0.8em;
+        width: 18%
+    }
+}
