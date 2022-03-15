@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const ItemDetail = ({title, description, price, imgUrl, stock}) => {
   return (
     <div className='item-detail'>

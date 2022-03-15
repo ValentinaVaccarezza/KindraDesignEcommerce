@@ -3,7 +3,7 @@ import {Item} from './Item.jsx';
 
 export const ItemList  = ({items}) => {
     return (
-        <div className="item-list" id="#cuadros">
+        <div className="item-list" id="cuadros">
             {
                 items.map((item) => <Item {...item} key={item.id}/> )
             }

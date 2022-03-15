@@ -26,7 +26,8 @@
         font-size:1.2em;
     }
     .botonAgregar {
-        font-size: 0.8em;
-        width: 18%
+        font-size: 0.7em;
+        padding: 6px;
+        width: 30%
     }
 }

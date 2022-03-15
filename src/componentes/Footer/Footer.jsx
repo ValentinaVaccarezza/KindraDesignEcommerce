@@ -38,13 +38,13 @@ const Footer = () => {
                 </div>
             </div>
             <div className="info">
-                <img src={ logoKindra } alt="logo kindra" />
+                <img src={ logoKindra } className='logoFooter' alt="logo kindra" />
                 <h3>Kindra Design</h3>
                 <p>Artículos de diseño</p>
                 <p>Envíos a todo el país</p>
             </div>
             <div className="redes">
-                <h4 className="seguinos">Seguínos!</h4>
+                <div><h4 className="seguinos">¡Seguínos!</h4></div>
                 <div>
                     <a href="https://www.facebook.com/kindradesign"><img src={ fb } className="logosRedes" alt="facebook" /></a>
                 </div>

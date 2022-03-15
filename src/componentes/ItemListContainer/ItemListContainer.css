@@ -4,13 +4,34 @@
     background-color: #FFF2E8;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
+    justify-content: space-around;    
 }
 .item {
     padding: 10px;
    
 }
 .fotos {
-    border-radius:5px
+    border-radius:5px;
+}
+
+/* ------RESPONSIVE DESIGN------ */
+
+@media screen and (min-width: 360px) and (max-width: 875px) {
+    .item-list{
+        width: 100%
+    }
+    .item {
+        font-size: 0.6em;
+    }
+    .title {
+        font-size: 1.5em;
+        font-weight: 500
+    }
+    
+    .fotos {
+        width: 100%
+    }
+    .botonProductos {
+        font-size: 1em;
+    }
 }

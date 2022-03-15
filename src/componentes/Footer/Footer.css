@@ -12,7 +12,7 @@
 }
 .logosRedes {
     width: 10vh;
-    padding: 12px;
+    padding: 4px;
 }
 .contacto {
     display: grid;
@@ -22,9 +22,9 @@
 }
 .redes {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 80px;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 .ubicacion, .mail, .wpp {
     display: flex;
@@ -90,17 +90,23 @@ p {
         padding: 0vh;
     }
     .redes {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 16px;
+        padding: 40px
     }
+    .logosRedes {
+    width: 10vh;
+    margin: 14px
+}
     .contacto {
         padding: 20px;
         justify-content: center;
     }
     .info {
-        padding: 10px
+        padding: 10px;
     }
+    .logoFooter {
+        margin-bottom: 30px;
+        width: 2vh;
+    }
+    
     
 }
