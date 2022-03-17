@@ -5,7 +5,6 @@ import getStock from '../helpers/getStock';
 import {stock} from '../../data/stock';
 import './ItemDetailContainer.css';
 
-
 const ItemDetailContainer = () => {
   
     const[item, setItem] = useState([])

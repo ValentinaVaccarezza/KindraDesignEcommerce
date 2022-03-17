@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ItemCount } from '../ItemCount/ItemCount';
 
 const ItemDetail = ({title, description, price, imgUrl, stock}) => {
   return (
@@ -10,6 +11,7 @@ const ItemDetail = ({title, description, price, imgUrl, stock}) => {
             <h1>{title}</h1>
             <h2>{description}</h2>
             <h3>{price}</h3>
+            <ItemCount initial={1} stock={10} />
         </div>
     </div>
   )

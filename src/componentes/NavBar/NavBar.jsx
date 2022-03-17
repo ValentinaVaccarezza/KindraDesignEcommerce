@@ -16,26 +16,28 @@ const NavBar = () => {
       
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="">
-
-      <NavLink to={`/category/cuadros`} id='link'>Cuadros</NavLink>
-      <NavLink to={`/category/fotoLibros`} id='link'>FotoLibros</NavLink>
-      <NavLink to={`/category/fotoPolaroid`}id='link'>Fotos Polaroid</NavLink>
-      <NavDropdown title="Papeleria" id="collasible-nav-dropdown">
+        <Nav className="me-auto cajaLinks">
+      
+      <NavLink to={`/cuadros`} id='link'>Cuadros</NavLink>
+      <NavLink to={`/fotoLibros`} id='link'>FotoLibros</NavLink>
+      <NavLink to={`/fotoPolaroid`}id='link'>Fotos</NavLink>
+      <NavDropdown title="Papeleria" id="link">
         <NavDropdown.Item href="#action/3.1" id='linksPapeleria' >Tarjetas personalizadas</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2" id='linksPapeleria'>Libretas</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3" id='linksPapeleria' >Agendas</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4" id='linksPapeleria'>Algo mas</NavDropdown.Item>
       </NavDropdown>
-      <NavLink to={`contacto`}id='link'>Contacto</NavLink>
+      <NavLink to={`/contacto`}id='link'>Contacto</NavLink>
+
         </Nav>
         <Nav>
 
         <NavLink to="/CartWidget"> 
         <CartWidget/>
-        </NavLink>
      
+        </NavLink> 
+
         </Nav>
         </Navbar.Collapse>
         </Container>

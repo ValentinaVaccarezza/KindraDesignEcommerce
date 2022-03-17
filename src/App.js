@@ -6,6 +6,7 @@ import {ItemListContainer} from './componentes/ItemListContainer/ItemListContain
 /*import {ItemCount} from './componentes/ItemCount/ItemCount';*/
 import { CopyRight, Footer } from './componentes/Footer/Footer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import { Cart } from './componentes/CartWidget/CartWidget';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={ <ItemListContainer/> } />
           <Route path="/ItemListContainer/:idCategory" element={ <ItemListContainer /> } />
           <Route path="/item/:idItem" element={ <ItemDetailContainer /> } />
+          <Route path="/CartWidget" element={ <Cart /> } />
         </Routes>
         <Footer/>
         <CopyRight/>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import { ItemCount } from '../ItemCount/ItemCount.jsx';
 import './ItemListContainer.css';
 import { stock } from '../../data/stock.jsx';
 import { listArray } from '../helpers/listArray.jsx';
@@ -36,6 +35,7 @@ return (
       <div className="cargando">Cargando productos...</div>
       :
       <ItemList items={items}/>
+     
     }
   </div>
 )

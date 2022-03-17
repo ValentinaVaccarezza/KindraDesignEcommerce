@@ -6,7 +6,7 @@ import './ItemCount.css';
      const [cantidad, setCantidad] = useState(initial) 
 
      const funcionRestar = () => {
-         if(cantidad > 0){
+         if(cantidad > 1){
              setCantidad(cantidad-1)
          }
      }
@@ -18,14 +18,14 @@ import './ItemCount.css';
 
      return (
          <div className="contador">
-             <button disabled={cantidad===0} onClick={funcionRestar} className="botonResta"> 
+             <button disabled={cantidad === 1} onClick={funcionRestar} className="botonResta"> 
                 -
              </button>
-            <span>{cantidad}</span>
-            <button disabled={cantidad===stock} onClick={funcionSumar} className="botonSuma">
+            <span className="mx-3">{cantidad}</span>
+            <button disabled={cantidad === stock} onClick={funcionSumar} className="botonSuma">
                 +
             </button>
-            <button disabled={cantidad===0} onClick={ () => onAdd(cantidad) } className="botonAgregar">
+            <button disabled={cantidad === 0} onClick={ () => onAdd(cantidad) } className="botonAgregar">
                 Agregar al carrito
             </button>
          </div>
