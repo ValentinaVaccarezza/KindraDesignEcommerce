@@ -11,14 +11,14 @@ const ItemListContainer = () => {
 
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false); 
-  const {idCategory} = useParams()
+  const {categoryId} = useParams()
 
   useEffect(() => {
   setLoading(true)
   listArray(stock)
   .then((res) => {
-    idCategory?
-    setItems(res.filter ( (item)=> item.category === idCategory))
+    categoryId?
+    setItems(res.filter ( (item)=> item.category === categoryId))
     :
     setItems(res)
   })
@@ -26,7 +26,7 @@ const ItemListContainer = () => {
   .finally(()=>{
     setLoading(false)
   })
-}, [])
+}, [categoryId])
 
 return (
   <div className="item-list-container">

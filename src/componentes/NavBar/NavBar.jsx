@@ -18,11 +18,11 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto cajaLinks">
       
-      <NavLink to={`/cuadros`} id='link'>Cuadros</NavLink>
-      <NavLink to={`/fotoLibros`} id='link'>FotoLibros</NavLink>
-      <NavLink to={`/fotoPolaroid`}id='link'>Fotos</NavLink>
+      <NavLink to={`/category/cuadros`} id='link'>Cuadros</NavLink>
+      <NavLink to={`/category/fotoLibros`} id='link'>Foto Libros</NavLink>
+      <NavLink to={`/category/fotosPolaroid`}id='link'>Fotos Polaroid</NavLink>
       <NavDropdown title="Papeleria" id="link">
-        <NavDropdown.Item href="#action/3.1" id='linksPapeleria' >Tarjetas personalizadas</NavDropdown.Item>
+       <NavLink to={`/category/tarjetas`} id='link'>Tarjetas personalizadas</NavLink>
         <NavDropdown.Item href="#action/3.2" id='linksPapeleria'>Libretas</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3" id='linksPapeleria' >Agendas</NavDropdown.Item>
         <NavDropdown.Divider />

@@ -51,11 +51,51 @@ export const stock = [
 
     {
         id: 6,
-        title: "FotoLibro",
+        title: "Foto Libro grande",
         description: "20 paginas",
-        price: "$1000",
+        price: 1000,
         imgUrl: "https://i.ibb.co/m9hgzcz/fotolibro.png",
         stock: "6",
         category: "fotoLibros"
+    },
+    
+    {
+        id: 7,
+        title: "Foto Libro pequeño",
+        description: "10 paginas",
+        price: 650,
+        imgUrl: "https://i.ibb.co/WnBd5jz/fotolibro2.png",
+        stock: "6",
+        category: "fotoLibros"
+    },
+
+    {
+        id: 8,
+        title: "Foto Libro horizontal",
+        description:"12 paginas",
+        price: 780,
+        imgUrl: "https://i.ibb.co/sJ6w1Y2/fotolibro3.png",
+        stock: "8",
+        category: "fotoLibros"
+    },
+
+    {
+        id: 9,
+        title: "Fotos Polaroid",
+        description: "Pack de 10 fotos",
+        price: 300,
+        imgUrl: "https://i.ibb.co/4jbtKz6/polaroid.png",
+        stock: "8",
+        category: "fotosPolaroid"
+    },
+
+    {
+        id: 10,
+        title: "Fotos Polaroid",
+        description: "Pack de 20 fotos",
+        price: 500,
+        imgUrl: "https://i.ibb.co/sC7dVJN/fotopolaroid.png",
+        stock: "8",
+        category: "fotosPolaroid"
     }
 ]
