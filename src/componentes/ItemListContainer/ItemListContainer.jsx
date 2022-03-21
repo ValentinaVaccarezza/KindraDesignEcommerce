@@ -31,7 +31,7 @@ const ItemListContainer = () => {
 return (
   <div className="item-list-container">
     {
-      loading? 
+      loading?
       <div className="cargando">Cargando productos...</div>
       :
       <ItemList items={items}/>

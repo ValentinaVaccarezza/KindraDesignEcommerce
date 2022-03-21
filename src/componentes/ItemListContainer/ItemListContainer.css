@@ -4,6 +4,7 @@
     background-color: #FFF2E8;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
 }
 .item {
     padding: 10px;
@@ -17,20 +18,34 @@
 
 @media screen and (min-width: 360px) and (max-width: 875px) {
     .item-list{
-        width: 100%
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
     }
     .item {
-        font-size: 0.6em;
+        font-size: 1em;
     }
     .title {
-        font-size: 1.5em;
-        font-weight: 500
+        font-size: 1.3em;
+        font-weight: 500;
     }
-    
+    .description {
+        font-size: 1.1em;
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+    .stock {
+        font-size: 1.3em
+    }
     .fotos {
         width: 100%
     }
     .botonProductos {
         font-size: 1em;
+        background-color:#BAB8F5;
+        border-style:double;
+        border-color:#D8B4D1;
+        border-radius: 10%;
+        margin-bottom: 4%;
     }
 }

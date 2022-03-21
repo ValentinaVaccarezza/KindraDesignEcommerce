@@ -7,3 +7,13 @@
     width: 10%;
     float: right;
 }
+
+/*-----RESPONSIVE DESIGN-----*/
+
+@media screen and (min-width:360px) and (max-width: 875px) {
+    .carrito {
+        width: 8%;
+        float: none;
+        margin-top: 4%;
+    }
+}

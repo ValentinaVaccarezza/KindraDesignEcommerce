@@ -31,7 +31,7 @@
     flex-direction: row;
 }
 .linkMail {
-    text-decoration:underline;
+    text-decoration:none;
     color:black
 }
 
@@ -81,7 +81,8 @@ p {
 
 @media screen and (min-width: 360px) and (max-width: 875px) {
     .cajaWpp {
-        display: none
+        margin-left: 80%;
+        margin-bottom: 8%;
     }
     .CajaFooter {
         display:flex;
@@ -89,11 +90,15 @@ p {
         margin-top: 10%;
         padding: 0vh;
     }
+    .seguinos {
+        font-size: 1.9em
+    }
     .redes {
-        padding: 40px
+        padding: 40px;
+       
     }
     .logosRedes {
-    width: 10vh;
+    width: 8vh;
     margin: 14px
 }
     .contacto {
@@ -102,11 +107,34 @@ p {
     }
     .info {
         padding: 10px;
+        display: flex;
+        flex-direction:column-reverse
+    }
+    .info h3 {
+        font-size: 2em;
+        letter-spacing: 0.2em;
+    }
+    .info p {
+        font-size: 1.4em
     }
     .logoFooter {
-        margin-bottom: 30px;
-        width: 2vh;
+        /*margin-bottom: 30px;*/
+        margin-top: 10px;
+        margin-left: 40%;
+        width: 10%;
     }
-    
+    .contacto {
+        padding-left: 10%
+    }
+    .contacto p {
+        font-size: 1.4em;
+        line-height: 1.8em
+    }
+  
+    .logosContacto {
+        width: 8vh;
+        padding: 6px;
+    }
+   
     
 }

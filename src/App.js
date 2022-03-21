@@ -7,14 +7,18 @@ import {ItemListContainer} from './componentes/ItemListContainer/ItemListContain
 import { CopyRight, Footer } from './componentes/Footer/Footer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { Cart } from './componentes/CartWidget/CartWidget';
+import CartContextProvider from './Context/CartContext';
 
 function App() {
 
   return (
+    <CartContextProvider>
+
     <BrowserRouter>
 
       <div className="App">
         <NavBar/>
+         
         <Routes>
           <Route path="/" element={ <ItemListContainer/> } />
           <Route path="/category/:categoryId" element={ <ItemListContainer /> } />
@@ -27,6 +31,8 @@ function App() {
       </div>
 
     </BrowserRouter>
+
+    </CartContextProvider>
   );
 
 }

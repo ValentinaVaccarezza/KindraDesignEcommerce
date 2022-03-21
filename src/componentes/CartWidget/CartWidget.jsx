@@ -1,6 +1,6 @@
-import React from 'react';
 import './CartWidget.css';
 import carrito from '../imagenes/carrito.png';
+import { CartContext, useCartContext } from '../../Context/CartContext';
 
 
 export const CartWidget = () => {
@@ -13,9 +13,15 @@ export const CartWidget = () => {
 }
 
 export const Cart = () => {
+
+  const {CartList, vaciarCart} = useCartContext()
+
   return (
     <div>
-      <h3>Soy el carrito</h3>
+      
+      {CartList.map(item => <li>Nombre: {item.title} Precio: {item.price} Cantidad: {item.cantidad} {item.imgUrl}</li>)}
+
+      <button onClick={vaciarCart}>Vaciar carrito</button>
     </div>
   )
 }

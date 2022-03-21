@@ -21,7 +21,10 @@
 #link {
    
     text-decoration: none;
-    color: black
+    color: black;
+}
+#link:hover {
+    text-decoration: underline 3px;
 }
 #link:hover {
     color: rgb(92, 86, 86)
@@ -36,5 +39,14 @@
 @media screen and (min-width: 360px) and (max-width:875px) {
    .logoKindra {
        width: 20%;
+       float:left;
+       margin-bottom: 6%;
    }
+  .cajaLinks {
+      width: 400px
+  }
+  #link {
+      font-size: 1.2em;
+      line-height: 2em
+  }
 }
