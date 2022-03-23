@@ -14,12 +14,14 @@ export const CartWidget = () => {
 
 export const Cart = () => {
 
-  const {CartList, vaciarCart} = useCartContext()
+  const {CartList, vaciarCart, removeItem} = useCartContext()
 
   return (
     <div>
       
       {CartList.map(item => <li>Nombre: {item.title} Precio: {item.price} Cantidad: {item.cantidad} {item.imgUrl}</li>)}
+
+      <button onClick={removeItem}> X </button>
 
       <button onClick={vaciarCart}>Vaciar carrito</button>
     </div>
