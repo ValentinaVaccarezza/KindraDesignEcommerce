@@ -22,11 +22,11 @@ const NavBar = () => {
       <NavLink to={`/category/fotoLibros`} id='link'>Foto Libros</NavLink>
       <NavLink to={`/category/fotosPolaroid`}id='link'>Fotos Polaroid</NavLink>
       <NavDropdown title="Papeleria" id="link">
-       <NavLink to={`/category/tarjetas`} id='link'>Tarjetas personalizadas</NavLink>
-        <NavDropdown.Item href="#action/3.2" id='linksPapeleria'>Libretas</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3" id='linksPapeleria' >Agendas</NavDropdown.Item>
+       <NavLink to={`/category/tarjetas`} className="subMenu" id='link'>Tarjetas/Invitaciones</NavLink>
+       <NavDropdown.Divider />
+        <NavLink to={`/category/libretas`} className="subMenu" id='link'>Libretas/Agendas</NavLink>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4" id='linksPapeleria'>Algo mas</NavDropdown.Item>
+        <NavLink to={`/category/stickers`} className="subMenu" id='link'>Stickers adhesivos</NavLink>
       </NavDropdown>
       <NavLink to={`/contacto`}id='link'>Contacto</NavLink>
 

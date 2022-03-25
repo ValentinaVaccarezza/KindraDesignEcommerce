@@ -9,6 +9,9 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import { Cart } from './componentes/CartWidget/CartWidget';
 import CartContextProvider from './Context/CartContext';
 
+
+
+
 function App() {
 
   return (
@@ -18,7 +21,7 @@ function App() {
 
       <div className="App">
         <NavBar/>
-         
+        
         <Routes>
           <Route path="/" element={ <ItemListContainer/> } />
           <Route path="/category/:categoryId" element={ <ItemListContainer /> } />

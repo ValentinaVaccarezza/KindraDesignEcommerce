@@ -10,8 +10,24 @@
     padding: 10px;
    
 }
+.title {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin: 10px
+}
 .fotos {
     border-radius:5px;
+    margin-bottom: 10px
+}
+.botonProductos {
+    font-size: 1em;
+    background-color:#BAB8F5;
+    border-style:double;
+    border-color:#D8B4D1;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 10px
+  ;
 }
 
 /* ------RESPONSIVE DESIGN------ */
@@ -25,10 +41,7 @@
     .item {
         font-size: 1em;
     }
-    .title {
-        font-size: 1.3em;
-        font-weight: 500;
-    }
+  
     .description {
         font-size: 1.1em;
         margin-top: 6%;
@@ -42,9 +55,6 @@
     }
     .botonProductos {
         font-size: 1em;
-        background-color:#BAB8F5;
-        border-style:double;
-        border-color:#D8B4D1;
         border-radius: 10%;
         margin-bottom: 4%;
     }

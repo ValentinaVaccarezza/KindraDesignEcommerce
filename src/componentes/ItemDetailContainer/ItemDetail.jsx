@@ -27,7 +27,9 @@ export const ItemDetail = ({title, description, price, imgUrl, stock}) => {
 
             { option ?
                   <ItemCount stock={stock} initial={1} onAdd={onAdd}/>: 
+                  
                   <Link to={`/CartWidget`}> <button>Finalizar compra</button> </Link>
+                  
 
             }
            

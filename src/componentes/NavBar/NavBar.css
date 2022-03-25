@@ -17,6 +17,10 @@
     flex-direction: rows;
     width: 700px
 }
+.subMenu {
+    background-color: #D8B4D1;
+    padding: 8px;
+}
 
 #link {
    
@@ -49,4 +53,7 @@
       font-size: 1.2em;
       line-height: 2em
   }
+  .subMenu {
+    padding: 4px;
+}
 }

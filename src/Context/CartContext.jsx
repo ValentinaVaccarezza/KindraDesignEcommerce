@@ -14,7 +14,7 @@ function CartContextProvider({children}) {
     }
 
     const IsInCart = (id) => {
-        return Cart.some( (prod) =>prod.id === id)
+        return Cart.some( (item) =>item.id === id)
     }
 
     const vaciarCart=()=>{
@@ -22,18 +22,24 @@ function CartContextProvider({children}) {
     }
 
     const removeItem = (id) => {
-        setCartList(CartList.filter(item => item.id === id))
+        setCartList(CartList.filter(item => item.id !== id))
     }
 
-    
+    const totalCompra = () => {
+        let totalCompra = 0;
+        CartList.forEach(item => totalCompra += item.price * item.cantidad)
+        return totalCompra
+    }
     return (
         <CartContext.Provider value={{
             CartList,
             agregarCart,
             vaciarCart,
             IsInCart,
-            removeItem
+            removeItem,
+            totalCompra
         }}>
+            
             {children}
         </CartContext.Provider>
     )
