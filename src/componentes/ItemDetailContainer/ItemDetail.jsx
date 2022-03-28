@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../Context/CartContext';
 import { ItemCount } from '../ItemCount/ItemCount';
-import { useCartContext } from '../../Context/CartContext';
+
 
 export const ItemDetail = ({title, description, price, imgUrl, stock}) => {
 
   const [option, setOption] = useState(true)
 
-  const {agregarCart, CartList, IsInCart} = useCartContext()
+  const {agregarCart, CartList} = useContext(CartContext)
 
   function onAdd(cantidad) {
     setOption(false)

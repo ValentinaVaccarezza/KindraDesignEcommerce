@@ -7,7 +7,7 @@ import {ItemListContainer} from './componentes/ItemListContainer/ItemListContain
 import { CopyRight, Footer } from './componentes/Footer/Footer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { Cart } from './componentes/CartWidget/CartWidget';
-import CartContextProvider from './Context/CartContext';
+import { CartContextProvider } from './Context/CartContext';
 
 
 
@@ -41,3 +41,4 @@ function App() {
 }
 
 export default App;
+
