@@ -5,6 +5,8 @@ import { stock } from '../../data/stock.jsx';
 import { listArray } from '../helpers/listArray.jsx';
 import { ItemList } from './ItemList.jsx';
 import { getStock } from '../helpers/getStock';
+
+import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore';
  
 
 const ItemListContainer = () => {
@@ -13,20 +15,34 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(false); 
   const {categoryId} = useParams()
 
-  useEffect(() => {
-  setLoading(true)
-  listArray(stock)
-  .then((res) => {
-    categoryId?
-    setItems(res.filter ( (item)=> item.category === categoryId))
-    :
-    setItems(res)
-  })
-  .catch((err)=>console.log(err))
-  .finally(()=>{
-    setLoading(false)
-  })
-}, [categoryId])
+  //useEffect(() => {
+  //setLoading(true)
+  //listArray(stock)
+  //.then((res) => {
+    //categoryId?
+    //setItems(res.filter ( (item)=> item.category === categoryId))
+    //:
+    //setItems(res)
+  //})
+ // .catch((err)=>console.log(err))
+  //.finally(()=>{
+    //setLoading(false)
+  //})
+//}, [categoryId])
+
+
+useEffect(() => {
+  const db = getFirestore()
+  const queryCollection = collection(db, 'items')
+  const queryFilter = query(queryCollection, where('stock', '>=', 0))
+  getDocs(queryFilter)
+  .then(resp => setItems(resp.docs.map(item=>({id: item.id, ...item.data()}))))
+  .catch(err => console.log(err))
+  .finally(()=> setLoading(false))
+
+
+},[])
+
 
 return (
   <div className="item-list-container">

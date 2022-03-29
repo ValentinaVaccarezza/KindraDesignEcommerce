@@ -5,6 +5,7 @@ import logoKindra from './../imagenes/logoKindra.jpeg';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { NavLink } from 'react-router-dom';
 
+
 const NavBar = () => {
   return (
     <div>
