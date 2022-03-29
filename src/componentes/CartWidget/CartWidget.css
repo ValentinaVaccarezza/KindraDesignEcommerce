@@ -39,8 +39,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    text-decoration-line: transparent;
+    width: 100%;
+    text-decoration-line: none;
     color: black;
+    font-weight: bold;
+   
 }
 
 /*-----RESPONSIVE DESIGN-----*/

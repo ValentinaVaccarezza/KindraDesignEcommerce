@@ -8,12 +8,12 @@ export const CartContextProvider = ({children}) => {
     const [CartList, setCartList] = useState([])
     const [total, setTotal] = useState(null)
 
-    const IsInCart = (id) => {
-        return CartList.some ( (item) => item.id === id)
+    const IsInCart = (prod) => {
+        return CartList.some ( (item) => item.id === prod)
     }
     const agregarCart = (item) => {
         if (IsInCart(item.id)) {
-            let itemIndex = CartList.findIndex(item => item.id === item.id)
+            let itemIndex = CartList.findIndex(prod => prod.id === item.id)
             CartList[itemIndex].cantidad += item.cantidad
         } 
         else {
@@ -60,4 +60,3 @@ export const CartContextProvider = ({children}) => {
         </CartContext.Provider>
     )
 }
-

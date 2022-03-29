@@ -14,7 +14,7 @@ export const CartWidget = () => {
     <div id='cart-widget'>
       <Link to={'/CartWidget'} className="carrito">
         <img src= { carrito } className="carrito" alt="carrito" />
-        {totalCompra() > 0 ? <div className='totalItems'>{totalCompra ()}</div> : <></> }
+        {totalCompra() > 0 ? <div className='totalItems'>${totalCompra ()}</div> : <></> }
         </Link>
 
     </div>

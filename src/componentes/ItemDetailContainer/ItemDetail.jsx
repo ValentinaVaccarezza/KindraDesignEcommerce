@@ -4,7 +4,7 @@ import { CartContext } from '../../Context/CartContext';
 import { ItemCount } from '../ItemCount/ItemCount';
 
 
-export const ItemDetail = ({title, description, price, imgUrl, stock}) => {
+export const ItemDetail = ({title, description, price, imgUrl, stock, id}) => {
 
   const [option, setOption] = useState(true)
 
@@ -12,7 +12,7 @@ export const ItemDetail = ({title, description, price, imgUrl, stock}) => {
 
   function onAdd(cantidad) {
     setOption(false)
-    agregarCart({...stock, title: title, cantidad: cantidad, price: price, imgUrl: imgUrl})
+    agregarCart({...stock, title: title, cantidad: cantidad, price: price, imgUrl: imgUrl, id: id})
   }
   console.log(CartList)
   return (
@@ -27,10 +27,11 @@ export const ItemDetail = ({title, description, price, imgUrl, stock}) => {
             <h2>${price}</h2>
 
             { option ?
-                  <ItemCount stock={stock} initial={1} onAdd={onAdd}/>: 
-                  
-                  <Link to={`/CartWidget`}> <button>Finalizar compra</button> </Link>
-                  
+                  <ItemCount stock={stock} initial={1} onAdd={onAdd}/> :
+                  <div className='botonesCompra'>
+                    <Link to={`/`}> <button className='seguir'>Seguir comprando</button> </Link>
+                    <Link to={`/CartWidget`}> <button className='finalizar'> Finalizar compra</button> </Link>
+                  </div>                
 
             }
            
