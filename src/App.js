@@ -6,7 +6,7 @@ import {ItemListContainer} from './componentes/ItemListContainer/ItemListContain
 /*import {ItemCount} from './componentes/ItemCount/ItemCount';*/
 import { CopyRight, Footer } from './componentes/Footer/Footer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
-import { Cart } from './componentes/CartWidget/CartWidget';
+import {Cart} from './componentes/CartWidget/CartWidget';
 import { CartContextProvider } from './Context/CartContext';
 
 
