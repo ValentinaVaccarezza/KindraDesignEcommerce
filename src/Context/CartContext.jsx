@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useLayoutEffect, useState } from "react";
-import { Cart } from "../componentes/CartWidget/CartWidget";
+
 
 export const CartContext = createContext([])
 

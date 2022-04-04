@@ -2,7 +2,7 @@ import React from 'react';
 import './NavBar.css'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import logoKindra from './../imagenes/logoKindra.jpeg';
-import { CartWidget } from '../CartWidget/CartWidget';
+import { CartWidget } from './CartWidget/CartWidget';
 import { NavLink } from 'react-router-dom';
 
 

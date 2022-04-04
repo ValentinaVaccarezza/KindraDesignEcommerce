@@ -34,14 +34,22 @@ const ItemListContainer = () => {
 useEffect(() => {
   const db = getFirestore()
   const queryCollection = collection(db, 'items')
-  const queryFilter = query(queryCollection, where('stock', '>=', 0))
-  getDocs(queryFilter)
-  .then(resp => setItems(resp.docs.map(item=>({id: item.id, ...item.data()}))))
-  .catch(err => console.log(err))
-  .finally(()=> setLoading(false))
+  if (categoryId) {
+    const queryFilter = query(queryCollection, where('category', '==', categoryId))
+    getDocs(queryFilter)
+    .then(resp => setItems(resp.docs.map(item=>({id: item.id, ...item.data()}))))
+    .catch(err => console.log(err))
+    .finally(()=> setLoading(false))
+  } else {
+    getDocs(queryCollection)
+    .then(resp => setItems(resp.docs.map(item=>({id: item.id, ...item.data()}))))
+    .catch(err => console.log(err))
+    .finally(()=> setLoading(false))
+  }
 
 
-},[])
+
+},[categoryId])
 
 
 return (
