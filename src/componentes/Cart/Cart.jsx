@@ -1,11 +1,8 @@
-import { useState } from "react";
+import React, { useContext, useState } from "react";
 import { addDoc, collection, getFirestore} from "firebase/firestore";
-import { CartContextProvider } from "../../Context/CartContext";
-import { useContext } from "react";
-//import './CartWidget.css';//
 import { CartContext} from '../../Context/CartContext';
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import './Cart.css';
 
 export const Cart = () => {
  
@@ -23,7 +20,7 @@ export const Cart = () => {
       phone: "",
     })
   
-    const {CartList, vaciarCart, removeItem, totalCompra} = CartContextProvider(CartContext)
+    const {CartList, vaciarCart, removeItem, totalCompra} = useContext(CartContext)
   
     const generarOrden = async () => {
       let orden = {}
@@ -60,7 +57,7 @@ export const Cart = () => {
               <>
                   <h2>Tu carrito está vacío</h2>
                   <Link to='/' className="">
-                      <button className="">Comenzá a comprar</button>
+                      <button className="seguir">Comenzá a comprar</button>
                   </Link>
               </>
               :
@@ -72,8 +69,8 @@ export const Cart = () => {
                       </div>
                       <div className='portada-detail'>
                         <h4>{item.title}</h4>
-                        <h4>precio: {item.price}</h4>
-                        <h4>cantidad:{item.cantidad}</h4>
+                        <h4>Precio: ${item.price}</h4>
+                        <h4>Cantidad: {item.cantidad}</h4>
                         <button className='botonCruz' onClick={() => removeItem(item.id)}> X </button>
                       </div>
   
@@ -85,10 +82,10 @@ export const Cart = () => {
                   <p>{id.length !== '' && `Tu id de compra es: ${id}`}</p>
                   <div>
                     <Link to={'/'} >
-                        <button>Seguir comprando</button>
+                    <button className='seguir'>Seguir comprando</button>
                     </Link>
                     <button className='botonVaciar' onClick={vaciarCart}>VaciarCarrito</button>
-                    <button onClick={generarOrden}>Terminar compra</button>
+                    <button  className="terminar" onClick={generarOrden}>Terminar compra</button>
                     
   
                     

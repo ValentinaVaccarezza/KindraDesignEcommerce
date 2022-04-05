@@ -1,11 +1,12 @@
 import React, {useContext} from 'react';
 import carrito from '../../imagenes/carrito.png';
 import { Link } from "react-router-dom";
-import { CartContextProvider } from "../../../Context/CartContext";
+/*import { CartContextProvider } from "../../../Context/CartContext";*/
+import { CartContext } from '../../../Context/CartContext';
 import './CartWidget.css';
 
 export const CartWidget = () => {
-    const {Cart, totalCompra} = useContext(CartContextProvider)
+    const {CartList, totalCompra} = useContext(CartContext)
 
   return (
     <div id='cart-widget'>

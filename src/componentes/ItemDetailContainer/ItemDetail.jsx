@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../../Context/CartContext';
 import { ItemCount } from '../ItemCount/ItemCount';
 
-
 export const ItemDetail = ({title, description, price, imgUrl, stock, id}) => {
 
   const [option, setOption] = useState(true)
@@ -30,7 +29,7 @@ export const ItemDetail = ({title, description, price, imgUrl, stock, id}) => {
                   <ItemCount stock={stock} initial={1} onAdd={onAdd}/> :
                   <div className='botonesCompra'>
                     <Link to={`/`}> <button className='seguir'>Seguir comprando</button> </Link>
-                    <Link to={`/CartWidget`}> <button className='finalizar'> Finalizar compra</button> </Link>
+                    <Link to={`/Cart`}> <button className='finalizar'> Finalizar compra</button> </Link>
                   </div>                
 
             }

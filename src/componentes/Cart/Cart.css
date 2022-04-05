@@ -1,0 +1,55 @@
+.carritoDetalle {
+    margin: 10px;
+    padding: 10px;
+}
+.botonesCompra button {
+    padding: 14px;
+    margin: 10px;
+    color: whitesmoke;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.botonTotal {
+    background-color: rgb(40, 92, 40);
+    border-style: none;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.botonVaciar { 
+    background-color: rgb(116, 16, 16);
+    border-style: none;
+    padding: 14px;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+.botonCruz {
+    background-color: gray;
+    border-style: dotted;
+    border-color: white
+}
+
+.totalItems{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    text-decoration-line: none;
+    color: black;
+    font-weight: bold;
+   
+}
+.seguir {
+    background-color: rgb(197, 139, 149);
+    padding: 14px;
+    border-radius: 10px;
+    border-style: none;
+}
+.terminar {
+    background-color: rgb(40, 92, 40);
+    padding: 14px;
+    border-radius: 10px;
+    border-style: none;
+}
