@@ -3,4 +3,5 @@ El siguiente es un proyecto web que pertenece a un emprendimiento de venta de ar
 
 
 #Update Firebase
-![image](https://i.ibb.co/2n63Y1X/captur-Kindra.png)
+![image](https://i.ibb.co/y5bh96R/kindra.gif)
+
