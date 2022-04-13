@@ -3,5 +3,5 @@ El siguiente es un proyecto web que pertenece a un emprendimiento de venta de ar
 
 
 #Update Gif
-![Alt Text](https://giphy.com/gifs/eFuH7S2bIu1ABOSz9s/tile)
+![](https://github.com/ValentinaVaccarezza/KindraDesignEcommerce/blob/master/src/componentes/media/kindra.gif)
 
