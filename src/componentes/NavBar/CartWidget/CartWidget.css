@@ -7,7 +7,14 @@
     width: 30%;
     float: right;
 }
-
+.totalItems{
+    display: inline-block;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+   margin-left: 34%;
+   font-family: 'Roboto Condensed', sans-serif;
+}
 /*-----RESPONSIVE DESIGN-----*/
 
 @media screen and (min-width:360px) and (max-width: 875px) {

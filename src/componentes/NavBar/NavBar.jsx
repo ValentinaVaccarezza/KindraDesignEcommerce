@@ -29,7 +29,7 @@ const NavBar = () => {
         <NavDropdown.Divider />
         <NavLink to={`/category/stickers`} className="subMenu" id='link'>Stickers adhesivos</NavLink>
       </NavDropdown>
-      <NavLink to={`/contacto`}id='link'>Contacto</NavLink>
+      <NavLink to={`/Contacto`}id='link'>Contacto</NavLink>
 
         </Nav>
         <Nav>

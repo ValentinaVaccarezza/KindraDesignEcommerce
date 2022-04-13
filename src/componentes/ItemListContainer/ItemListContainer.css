@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto+Serif:wght@200&display=swap');
 
 .item-list{
     background-color: #FFF2E8;
@@ -13,21 +13,24 @@
 .title {
     font-size: 1.3em;
     font-weight: 500;
-    margin: 10px
+    margin: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .fotos {
     border-radius:5px;
     margin-bottom: 10px
 }
+.description {
+    font-family: 'Roboto Serif', serif;
+}
 .botonProductos {
     font-size: 1em;
-    background-color:#BAB8F5;
+    background-color: #FFE1E9;
     border-style:double;
-    border-color:#D8B4D1;
+    border-color:#CCAACB;
     border-radius: 10px;
     padding: 4px;
-    margin: 10px
-  ;
+    margin: 10px;
 }
 
 /* ------RESPONSIVE DESIGN------ */

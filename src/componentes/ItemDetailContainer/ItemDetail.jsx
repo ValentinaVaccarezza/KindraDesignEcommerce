@@ -15,7 +15,7 @@ export const ItemDetail = ({title, description, price, imgUrl, stock, id}) => {
   }
   console.log(CartList)
   return (
-    <div className='item-detail'>
+    <div className='detalleProd'>
         <div className='portada'>
           <img src={imgUrl} alt={title} />
         </div> 

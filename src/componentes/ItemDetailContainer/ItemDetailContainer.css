@@ -1,6 +1,12 @@
 .botonesCompra .seguir {
-    background-color: rgb(197, 139, 149)
+    background-color: rgb(197, 139, 149);
+    color: whitesmoke
 }
 .botonesCompra .finalizar {
     background-color: rgb(40, 92, 40);
+    color:whitesmoke
+}
+.detalleProd {
+    margin-top: 30px;
+    font-family: 'Roboto Serif', serif;
 }

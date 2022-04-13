@@ -46,10 +46,10 @@ const Footer = () => {
             <div className="redes">
                 <div><h4 className="seguinos">¡Seguínos!</h4></div>
                 <div>
-                    <a href="https://www.facebook.com/kindradesign"><img src={ fb } className="logosRedes" alt="facebook" /></a>
+                    <a href="https://www.facebook.com/kindradesign" target="_blank"><img src={ fb } className="logosRedes" alt="facebook" /></a>
                 </div>
                 <div>
-                    <a href="https://www.instagram.com/kindradesign/"><img src={ ig } className="logosRedes" alt="instagram" /></a>
+                    <a href="https://www.instagram.com/kindradesign/" target="_blank"><img src={ ig } className="logosRedes" alt="instagram" /></a>
                 </div>
             </div>
         </div>
