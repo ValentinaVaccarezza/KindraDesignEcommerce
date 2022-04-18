@@ -9,7 +9,8 @@
 }
 .botonAgregar {
     width: 12%;
-    padding: 8px;
+    padding: 7px;
+    font-size: 1em;
     border-style: none;
     border-radius: 14px;
     background-color: #3a7251;

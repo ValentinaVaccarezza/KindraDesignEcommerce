@@ -62,7 +62,7 @@ const CopyRight = () => {
             <span><p>Copyright &copy; Valentina Vaccarezza 2022</p></span>
 
             <div className="cajaWpp">
-                <a href="https://api.whatsapp.com/send?phone=02324565226">
+                <a href="https://api.whatsapp.com/send?phone=02324565226" target="_blank">
                 <img src={ whatsapp } alt="whatsapp" />
                 </a>
             </div>

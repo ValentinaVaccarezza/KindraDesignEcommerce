@@ -13,19 +13,19 @@ export const CartContextProvider = ({children}) => {
     const IsInCart = (prod) => {
         return CartList.some ( (item) => item.id === prod)
     }
-    const agregarCart = (item) => {
+    const addCart = (item) => {
         if (IsInCart(item.id)) {
             let itemIndex = CartList.findIndex(prod => prod.id === item.id)
-            CartList[itemIndex].cantidad += item.cantidad
+            CartList[itemIndex].quantity += item.quantity
         } 
         else {
             setCartList( [ ...CartList, item] )
         } 
-        totalCantidad()
+        totalQuantity()
     }
 
 
-    const vaciarCart=()=>{
+    const removeCart=()=>{
         setCartList([])
     }
 
@@ -33,29 +33,29 @@ export const CartContextProvider = ({children}) => {
         setCartList(CartList.filter(item => item.id !== id))
     }
 
-    const totalCompra = () => {
-        let totalCompra = 0;
-        CartList.forEach(item => totalCompra += item.price * item.cantidad)
-        return totalCompra
+    const totalShop = () => {
+        let totalShop = 0;
+        CartList.forEach(item => totalShop += item.price * item.quantity)
+        return totalShop
     }
-    const totalCantidad = () => {
-        let totalCantidad = 0;
-        CartList.forEach(item => totalCantidad += item.cantidad)
-        setTotal(totalCantidad)
+    const totalQuantity = () => {
+        let totalQuantity = 0;
+        CartList.forEach(item => totalQuantity += item.quantity)
+        setTotal(totalQuantity)
     }
     useEffect(() => {
-        totalCantidad()
+        totalQuantity()
     }, [CartList])
     return (
         <CartContext.Provider value={{
             CartList,
             total,
-            agregarCart,
-            vaciarCart,
+            addCart,
+            removeCart,
             IsInCart,
             removeItem,
-            totalCompra,
-            totalCantidad
+            totalShop,
+            totalQuantity
         }}>
             
             {children}

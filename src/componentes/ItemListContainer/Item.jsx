@@ -3,7 +3,7 @@ import './ItemListContainer.css';
 import { Link } from 'react-router-dom';
 
 
-export const Item = ({id, title, description, price, imgUrl,  stock}) => {
+export const Item = ({id, title, description, price, imgUrl}) => {
     return (
         <div className="item">
             <div className='title'>{title}</div>

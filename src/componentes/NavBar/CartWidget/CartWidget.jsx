@@ -5,13 +5,13 @@ import { CartContext } from '../../../Context/CartContext';
 import './CartWidget.css';
 
 export const CartWidget = () => {
-    const {CartList, totalCompra} = useContext(CartContext)
+    const {CartList, totalShop} = useContext(CartContext)
 
   return (
     <div id='cart-widget'>
       <Link to={'/Cart'} className="carrito">
         <img src= { carrito } className="carrito" alt="carrito" />
-        {totalCompra() > 0 ? <div className='totalItems'>${totalCompra ()}</div> : <></> }
+        {totalShop() > 0 ? <div className='totalItems'>${totalShop ()}</div> : <></> }
         </Link>
 
     </div>

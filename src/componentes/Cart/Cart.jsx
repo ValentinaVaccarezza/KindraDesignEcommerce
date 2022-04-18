@@ -20,7 +20,7 @@ export const Cart = () => {
     phone: "",
   })
 
-  const {CartList, vaciarCart, removeItem, totalCompra} = useContext(CartContext)
+  const {CartList, removeCart, removeItem, totalShop} = useContext(CartContext)
 
   const generarOrden = async (e) => {
     e.preventDefault();
@@ -32,11 +32,11 @@ export const Cart = () => {
     let orden = {}
     orden.date = date()
     orden.buyer = dataForm
-    orden.total = totalCompra()
+    orden.total = totalShop()
     orden.items = CartList.map((cartItem) => {
       const id = cartItem.id
       const nombre = cartItem.title
-      const precio = cartItem.price * cartItem.cantidad
+      const precio = cartItem.price * cartItem.quantity
      
       return { id, nombre, precio}
     })
@@ -49,7 +49,7 @@ export const Cart = () => {
       .catch((err) => console.error(err))
       .finally(() => console.log("terminado"))
 
-      vaciarCart()
+      removeCart()
     
   }
   console.log(dataForm)
@@ -88,11 +88,11 @@ export const Cart = () => {
                       </div>
                       <div> 
                         <h5>Cantidad</h5>
-                        <p>{item.cantidad}</p>
+                        <p>{item.quantity}</p>
                       </div>
                       <div> 
                         <h5>Total</h5>
-                        <p>${totalCompra()}</p>
+                        <p>${totalShop()}</p>
                       </div>
                       <div>
                       <button className='botonCruz' onClick={() => removeItem(item.id)}> X </button>
@@ -105,7 +105,7 @@ export const Cart = () => {
                     <Link to={'/'} >
                     <button className='seguir'>Seguir comprando</button>
                     </Link>
-                    <button className='botonVaciar' onClick={vaciarCart}>VaciarCarrito</button>
+                    <button className='botonVaciar' onClick={removeCart}>VaciarCarrito</button>
                   </div> 
                 </div>
                 

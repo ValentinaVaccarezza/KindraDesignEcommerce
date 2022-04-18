@@ -13,18 +13,6 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(false)
     const {idItem} = useParams()
 
-   // useEffect(() => {
-     //   setLoading(true)
-     //   getStock(stock)
-      //  .then((res) => {
-      //      setItem(res.find( (item) => item.id === parseInt (idItem) ))
-      //  })
-     //   .catch((err) => console.log(err))
-     //   .finally(() => {
-     //       setLoading(false)
-     //   })
-   // }, [idItem])
-
    useEffect(()=>{
        setLoading(true)
        const db = getFirestore();

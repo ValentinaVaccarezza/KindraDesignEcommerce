@@ -7,11 +7,11 @@ export const ItemDetail = ({title, description, price, imgUrl, stock, id}) => {
 
   const [option, setOption] = useState(true)
 
-  const {agregarCart, CartList} = useContext(CartContext)
+  const {addCart, CartList} = useContext(CartContext)
 
-  function onAdd(cantidad) {
+  function onAdd(quantity) {
     setOption(false)
-    agregarCart({...stock, title: title, cantidad: cantidad, price: price, imgUrl: imgUrl, id: id})
+    addCart({...stock, title: title, quantity: quantity, price: price, imgUrl: imgUrl, id: id})
   }
   console.log(CartList)
   return (
